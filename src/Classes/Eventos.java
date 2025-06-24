@@ -1,0 +1,75 @@
+package Classes;
+
+import java.util.List;
+
+public abstract class Eventos {
+	
+	protected int idEvento;
+	protected int tipoEvento;
+	protected String nomeEvento;
+	protected Local localEvento;
+	protected Enum avaliacao;
+	protected List listaParticipantes;
+	
+	public Eventos(int idEvento,int tipoEvento, String nomeEvento, Local localEvento) {
+		super();
+		this.idEvento = idEvento;
+		this.tipoEvento = tipoEvento;
+		this.nomeEvento = nomeEvento;
+		this.localEvento = localEvento;
+		this.avaliacao = null;
+		this.listaParticipantes = null;
+	}
+	
+	
+	public int contarParticipantes() {
+		
+		 int numeroparticipantes=0;
+		 
+		 return numeroparticipantes;
+	}
+
+
+	public int getIdEvento() {
+		return idEvento;
+	}
+
+
+	public String getNomeEvento() {
+		return nomeEvento;
+	}
+
+
+	public Local getLocalEvento() {
+		return localEvento;
+	}
+
+
+	public Enum getAvaliacao() {
+		return avaliacao;
+	}
+
+
+	public List getListaParticipantes() {
+		return listaParticipantes;
+	}
+
+
+	public void setAvaliacao(Enum avaliacao) {
+		this.avaliacao = avaliacao;
+	}
+
+
+	public int getTipoEvento() {
+		return tipoEvento;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
