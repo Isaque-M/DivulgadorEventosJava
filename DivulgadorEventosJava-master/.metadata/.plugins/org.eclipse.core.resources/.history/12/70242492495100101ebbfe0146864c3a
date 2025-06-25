@@ -1,0 +1,83 @@
+package Classes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import Enum.Avaliacao;
+
+public abstract class Eventos {
+	
+	protected int idEvento;
+	protected int tipoEvento;
+	protected String nomeEvento;
+	protected Local localEvento;
+	protected Avaliacao avaliacao;
+	protected List<	Usuario> listaParticipantes;
+	
+	public Eventos(int idEvento,int tipoEvento, String nomeEvento, Local localEvento) {
+		super();
+		this.idEvento = idEvento;
+		this.tipoEvento = tipoEvento;
+		this.nomeEvento = nomeEvento;
+		this.localEvento = localEvento;
+		this.avaliacao = null;
+		this.listaParticipantes = new ArrayList<>();
+	}
+	
+	
+	public int contarParticipantes() {
+		
+		 int numeroparticipantes=0;
+		 
+		 return numeroparticipantes;
+	}
+
+	public void adicionarParticipante(Usuario user) {
+        listaParticipantes.add(user);
+    }
+
+	public int getIdEvento() {
+		return idEvento;
+	}
+
+
+	public String getNomeEvento() {
+		return nomeEvento;
+	}
+
+
+	public Local getLocalEvento() {
+		return localEvento;
+	}
+
+
+	public Enum<?> getAvaliacao() {
+		return avaliacao;
+	}
+
+
+	public List<?> getListaParticipantes() {
+		return listaParticipantes;
+	}
+
+
+	public void setAvaliacao(Enum<?> avaliacao) {
+		this.avaliacao = avaliacao;
+	}
+
+
+	public int getTipoEvento() {
+		return tipoEvento;
+	}
+
+
+	public void exibirDados() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+	
+}
+
+	

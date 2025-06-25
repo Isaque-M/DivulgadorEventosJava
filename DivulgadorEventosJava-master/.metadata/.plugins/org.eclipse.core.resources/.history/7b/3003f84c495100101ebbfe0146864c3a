@@ -1,0 +1,26 @@
+package Classes;
+
+public class Local {
+	
+	private String nomeRua;
+	private String bairro;
+	private String cep;
+	private String cidade;
+	
+	
+	public Local(String nomeRua, String bairro, String cep, String cidade) {
+		super();
+		this.nomeRua = nomeRua;
+		this.bairro = bairro;
+		this.cep = cep;
+		this.cidade = cidade;
+	}
+	
+	public void verificaCep() {
+		
+	}
+	
+	
+	
+
+}

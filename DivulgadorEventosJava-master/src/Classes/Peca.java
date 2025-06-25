@@ -1,0 +1,27 @@
+package Classes;
+
+import Interfaces.InterfaceEventos;
+
+public class Peca extends Eventos implements InterfaceEventos{
+	
+	private Diretor nomeDiretor;
+
+	public Peca(int idEvento,int tipoEvento ,String nomeEvento, Local localEvento,Diretor nomediretor) {
+		super(idEvento,tipoEvento, nomeEvento, localEvento);
+		this.nomeDiretor = nomediretor;
+    }
+
+    @Override
+    public void exibirDados() {
+        System.out.println("🎭 PEÇA TEATRAL");
+        System.out.println("ID: " + idEvento);
+        System.out.println("Nome: " + nomeEvento);
+        System.out.println("Diretor: " + (nomeDiretor != null ? nomeDiretor.getNomeDiretor() : "Desconhecido"));
+        System.out.println("Local: " + localEvento);
+        System.out.println("Tipo: " + tipoEvento);
+        System.out.println("Avaliação: " + (avaliacao != null ? avaliacao : "Ainda não avaliado"));
+        System.out.println("Participantes: " + contarParticipantes());
+        System.out.println("────────────────────────────");
+    }
+
+}

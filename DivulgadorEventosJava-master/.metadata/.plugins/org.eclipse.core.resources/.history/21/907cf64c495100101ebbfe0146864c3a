@@ -1,0 +1,16 @@
+package Classes;
+
+public class Peca extends Eventos{
+	
+	private Diretor nomeDiretor;
+
+	public Peca(int idEvento,int tipoEvento ,String nomeEvento, Local localEvento,Diretor nomediretor) {
+		super(idEvento,tipoEvento, nomeEvento, localEvento);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	
+
+}
