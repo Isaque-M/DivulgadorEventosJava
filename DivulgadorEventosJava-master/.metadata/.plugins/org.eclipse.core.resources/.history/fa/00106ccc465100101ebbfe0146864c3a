@@ -1,0 +1,31 @@
+
+import Classes.Comentarios;
+import Classes.Diretor;
+import Classes.Local;
+import Classes.Peca;
+import Classes.Perfil;
+import Classes.Usuario;
+import Enum.Avaliacao;
+
+	public class Main{
+	    public static void main(String[] args) {
+	        // Criando um local
+	        Local local = new Local("Av. Brasil", "Centro", "20000-000", "Rio de Janeiro");
+
+	        // Criando um perfil e usuário
+	        Perfil perfil = new Perfil("Apaixonado por cultura");
+	        Usuario usuario = new Usuario("Isaque", "isaque@email.com", "123", perfil);
+
+	        // Criando e divulgando uma peça
+	        Diretor diretor = new Diretor("João das Peças");
+	        Peca peca = new Peca(1, 4, "Romeu e Julieta", local, diretor);
+	        usuario.Fazercheckin(peca);
+	        usuario.avaliarEvento(1, Avaliacao.Excelente);
+
+	        // Comentário
+	        Comentarios com = new Comentarios(1, "Espetacular!", "Atuação maravilhosa!", usuario);
+	        usuario.fazerComentarios(com);
+
+	        
+	    }
+	}

@@ -1,0 +1,32 @@
+package Classes;
+
+public class Local {
+	
+	private String nomeRua;
+	private String bairro;
+	private String cep;
+	private String cidade;
+	
+	
+	public Local(String nomeRua, String bairro, String cep, String cidade) {
+		super();
+		this.nomeRua = nomeRua;
+		this.bairro = bairro;
+		this.cep = cep;
+		this.cidade = cidade;
+	}
+	
+	public void verificaCep() {
+		if (this.cep != null && this.cep.matches("\\d{5}-\\d{3}")) {
+	        System.out.println("CEP válido: " + this.cep);
+	    } else {
+	        System.out.println("CEP inválido! O formato correto é XXXXX-XXX.");
+	    }
+
+	}
+	@Override
+	public String toString() {
+	    return nomeRua + ", " + bairro + " - " + cidade + " (" + cep + ")";
+	}
+
+}

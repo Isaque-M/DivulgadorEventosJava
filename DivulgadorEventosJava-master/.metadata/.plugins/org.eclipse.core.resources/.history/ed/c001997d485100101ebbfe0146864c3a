@@ -1,0 +1,30 @@
+package Classes;
+
+public class Peca extends Eventos {
+
+	private Diretor nomeDiretor;
+
+	public Peca(int idEvento, int tipoEvento, String nomeEvento, Local localEvento, Diretor nomediretor) {
+		super(idEvento, tipoEvento, nomeEvento, localEvento);
+		this.nomeDiretor = nomeDiretor;
+
+	}
+	
+	public Diretor getNomeDiretor() {
+		return nomeDiretor;
+	}
+
+	public void setNomeDiretor(Diretor nomeDiretor) {
+		this.nomeDiretor = nomeDiretor;
+	}
+
+	@Override
+    public void exibirDados() {
+        System.out.println("Peça: " + nomeEvento);
+        System.out.println("Diretor: " + nomeDiretor.getNomeDiretor());
+        System.out.println("Local: " + localEvento);
+        System.out.println("Avaliação: " + (avaliacao != null ? avaliacao : "Sem avaliação"));
+    }
+
+
+}

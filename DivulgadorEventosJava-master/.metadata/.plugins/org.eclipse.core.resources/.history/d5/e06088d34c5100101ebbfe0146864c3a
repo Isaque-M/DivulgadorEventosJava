@@ -1,0 +1,50 @@
+
+import Classes.Comentarios;
+import Classes.Diretor;
+import Classes.Local;
+import Classes.Peca;
+import Classes.Perfil;
+import Classes.Usuario;
+import Enum.Avaliacao;
+import Interfaces.InterfaceEventos;
+
+public class Main {
+	
+	    public static void main(String[] args) {
+	        // Criando local e validando CEP
+	        Local local = new Local("Av. Brasil", "Centro", "20000-000", "Rio de Janeiro");
+	        local.verificaCep(); // Saída no console se o CEP é válido
+
+	        // Criando perfil do usuário
+	        Perfil perfil = new Perfil("Apaixonado por cultura");
+
+	        // Criando usuário
+	        Usuario usuario = new Usuario("Isaque", "isaque@email.com", "123", perfil);
+
+	        // Criando diretor da peça
+	        Diretor diretor = new Diretor("João das Peças");
+
+	        // Criando uma peça teatral
+	        Peca peca = new Peca(1, 4, "Romeu e Julieta", local, diretor);
+
+	        // Usuário faz check-in no evento (adicionado como participante)
+	        usuario.Fazercheckin(peca);
+
+	        // Usuário avalia o evento com nota excelente
+	        usuario.avaliarEvento(1, Avaliacao.Excelente);
+
+	        // Usuário faz um comentário
+	        Comentarios comentario = new Comentarios(1, "Espetacular!", "Atuação maravilhosa!", usuario);
+	        usuario.fazerComentarios(comentario);
+
+	        // Exibindo dados completos do evento
+	        InterfaceEventos evento = peca;
+	        evento.exibirDados();
+
+	        // Mostrar contagem de participantes separadamente (opcional)
+	        System.out.println("Total de participantes no evento: " + peca.contarParticipantes());
+	    }
+	}
+
+
+
